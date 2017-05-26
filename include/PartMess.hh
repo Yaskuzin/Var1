@@ -6,7 +6,8 @@
 #define M_FW_V1_PATMESS_HH
 
 #include <G4UImessenger.hh>
-
+#include <G4UIcmdWithAnInteger.hh>
+#include <PrimaryPart.hh>
 class PrimaryPart;
 class PartMess : public G4UImessenger{
 public:
@@ -15,7 +16,7 @@ public:
     void SetNewValue(G4UIcommand *command, G4String newValue);
 private:
     PrimaryPart* part_act;
-    G4UIdirectory* part_dir;
+
 };
 
 #endif //M_FW_V1_PATMESS_HH

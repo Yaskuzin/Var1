@@ -7,6 +7,7 @@
 
 GeoMess::GeoMess(Geometry *geometry) {
 
+
 }
 
 GeoMess::~GeoMess(){

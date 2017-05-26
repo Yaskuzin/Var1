@@ -24,6 +24,8 @@ PrimaryPart::~PrimaryPart() {
     delete partMess;
 }
 
+
+
 void PrimaryPart::GeneratePrimaries(G4Event* anEvent) {
     gun->SetParticleEnergy(14 * MeV);
     gun->SetParticlePosition(G4ThreeVector(0,20*(2*G4UniformRand()-1)*cm, 0));

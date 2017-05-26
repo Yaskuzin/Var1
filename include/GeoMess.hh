@@ -7,6 +7,10 @@
 
 #include <Geometry.hh>
 #include <G4UImessenger.hh>
+#include <G4UIcmdWithADoubleAndUnit.hh>
+#include <G4UIcmdWithAnInteger.hh>
+
+
 class Geometry;
 class GeoMess : public G4UImessenger{
 public:

@@ -10,12 +10,13 @@
 #include <fstream>
 #include <map>
 #include "PartMess.hh"
-
+class PartMess;
 class PrimaryPart: public G4VUserPrimaryGeneratorAction{
 private:
     G4ParticleGun* gun;
     G4ThreeVector pat_m;
     PartMess* partMess;
+
 public:
     PrimaryPart();
     ~PrimaryPart();
