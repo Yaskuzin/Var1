@@ -13,5 +13,8 @@ SteppingAction::SteppingAction(EventAct * event)
 
 void SteppingAction::UserSteppingAction(const G4Step * aStep) {
     G4String pname = aStep->GetTrack()->GetDefinition()->GetParticleName();
-    G4String volmatname = aStep->GetTrack()->GetVolume()->GetLogicalVolume()->GetMaterial()->GetName();
+    G4String volname = aStep->GetTrack()->GetVolume()->GetLogicalVolume()->GetName();
+    if(pname=="neutron"&& volname=="det_log"){
+
+    }
 }
