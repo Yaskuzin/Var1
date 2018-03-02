@@ -7,6 +7,7 @@
 #include <G4PVPlacement.hh>
 #include <G4SolidStore.hh>
 #include <G4GeometryManager.hh>
+#include <G4RunManager.hh>
 
 Geometry::Geometry() {
     nist = G4NistManager::Instance();
@@ -57,4 +58,10 @@ G4VPhysicalVolume* Geometry::Construct() {
     new G4PVPlacement(new G4RotationMatrix(0,0,0),det_pos,det_log,"det_PVP",world_log,false,0);
 
     return new G4PVPlacement(0, G4ThreeVector(), world_log, "world_PVP", 0, false, 0);
+}
+
+void Geometry::SetDetector(G4String g4String) {
+    det_pos = G4ThreeVector(120*cm,0,0);
+    G4RunManager::GetRunManager()->DefineWorldVolume(Construct());
+    G4RunManager::GetRunManager()->ReinitializeGeometry();
 }

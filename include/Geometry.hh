@@ -21,6 +21,8 @@ public:
     ~Geometry();
     virtual G4VPhysicalVolume *Construct();
 
+    void SetDetector(G4String g4String);
+
 private:
     G4NistManager* nist;
     G4Material* world_mat;
@@ -33,6 +35,8 @@ private:
 
     G4ThreeVector det_pos;
     GeoMess* geoMess;
+    G4Box *world;
+    G4LogicalVolume *world_log;
 };
 
 #endif //BGO_AND_GAMMA_GEOMETRY_HH

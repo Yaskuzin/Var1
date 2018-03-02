@@ -9,6 +9,7 @@
 #include <G4UImessenger.hh>
 #include <G4UIcmdWithADoubleAndUnit.hh>
 #include <G4UIcmdWithAnInteger.hh>
+#include <G4UIcmdWithAString.hh>
 
 
 class Geometry;
@@ -20,5 +21,6 @@ public:
 private:
     Geometry* det;
     G4UIdirectory* geom_dir;
+    G4UIcmdWithAString*      fDetCmd;
 };
 #endif //M_FW_V1_DETMESS_HH
